@@ -1,0 +1,8 @@
+D:\Claim Academy Assignments\BenEricksonLab1\BenEricksonLab1\bin\Debug\BenEricksonLab1.exe.config
+D:\Claim Academy Assignments\BenEricksonLab1\BenEricksonLab1\bin\Debug\BenEricksonLab1.exe
+D:\Claim Academy Assignments\BenEricksonLab1\BenEricksonLab1\bin\Debug\BenEricksonLab1.pdb
+D:\Claim Academy Assignments\BenEricksonLab1\BenEricksonLab1\obj\Debug\BenEricksonLab1.csproj.AssemblyReference.cache
+D:\Claim Academy Assignments\BenEricksonLab1\BenEricksonLab1\obj\Debug\BenEricksonLab1.csproj.SuggestedBindingRedirects.cache
+D:\Claim Academy Assignments\BenEricksonLab1\BenEricksonLab1\obj\Debug\BenEricksonLab1.csproj.CoreCompileInputs.cache
+D:\Claim Academy Assignments\BenEricksonLab1\BenEricksonLab1\obj\Debug\BenEricksonLab1.exe
+D:\Claim Academy Assignments\BenEricksonLab1\BenEricksonLab1\obj\Debug\BenEricksonLab1.pdb
