@@ -53,12 +53,11 @@ namespace BenEricksonLab1
                         if (classrooms.Count == 0)
                         {
                             Console.WriteLine("There are no classrooms to list.");
-                            break;
                         }
 
                         for (int i = 0; i < classrooms.Count; i++)
                         {
-                            Console.WriteLine($"Classroom #{i}: {classrooms[i].Name}");
+                            Console.WriteLine($"Classroom #{i + 1}: {classrooms[i].Name}");
                         }
 
                         // Add whitespace to console
@@ -192,6 +191,12 @@ namespace BenEricksonLab1
                         // Add whitespace to console
                         Console.WriteLine("\n\n");
 
+                        // If there are no students, let the user know
+                        if (chosenClassroom.Students.Count == 0)
+                        {
+                            Console.WriteLine("There are no students to list.");
+                        }
+
                         for (int i = 0; i < chosenClassroom.Students.Count; i++)
                         {
                             Console.WriteLine($"{chosenClassroom.Students[i].Name} has an average grade of {chosenClassroom.Students[i].GetAverageGrade()}");
@@ -268,7 +273,7 @@ namespace BenEricksonLab1
                             if (i == chosenClassroom.Students.Count)
                             {
                                 Console.WriteLine("Your students could not be identified.");
-                                return;
+                                break;
                             }
 
                             if (chosenClassroom.Students[i].Name == firstStudentName)
@@ -424,7 +429,7 @@ namespace BenEricksonLab1
                         // List student's assignments
                         for (int i = 0; i < chosenStudent.Assignments.Count; i++)
                         {
-                            Console.WriteLine($"This assignment's name is {chosenStudent.Assignments[i].AssignmentName}, and the grade is {chosenStudent.Assignments[i].Grade}.");
+                            Console.WriteLine($"This assignment's name is {chosenStudent.Assignments[i].AssignmentName}, and the grade is {chosenStudent.Assignments[i].Grade ?? 0}.");
                         }
 
                         // Add whitespace to console
@@ -486,7 +491,7 @@ namespace BenEricksonLab1
 
                         for (int i = 0; i < chosenStudent.Assignments.Count; i++)
                         {
-                            Console.WriteLine($"This assignment's name is {chosenStudent.Assignments[i].AssignmentName}, and the grade is {chosenStudent.Assignments[i].Grade}.");
+                            Console.WriteLine($"This assignment's name is {chosenStudent.Assignments[i].AssignmentName}, and the grade is {chosenStudent.Assignments[i].Grade ?? 0}.");
                         }
 
                         // Add whitespace to console
@@ -572,12 +577,12 @@ namespace BenEricksonLab1
                         // Add whitespace to console
                         Console.WriteLine("\n\n");
 
-                        double lowestGrade = 0;
+                        double lowestGrade = double.MaxValue;
                         int lowestGradeIndex = 0;
 
                         for (int i = 0; i < chosenStudent.Assignments.Count; i++)
                         {
-                            if (chosenStudent.Assignments[i].Grade < lowestGrade)
+                            if (chosenStudent.Assignments[i].Grade < lowestGrade && chosenStudent.Assignments[i].Grade != null)
                             {
                                 lowestGrade = chosenStudent.Assignments[i].Grade ?? 0;
                                 lowestGradeIndex = i;

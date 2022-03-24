@@ -61,8 +61,8 @@ namespace BenEricksonLab1.Library
                 if (currentAssignment.Grade != null)
                 {
                     averageGrade += currentAssignment.Grade ?? 0;
-                    gradedAssignments++;
                 }
+                gradedAssignments++;
             }
 
             averageGrade /= gradedAssignments;
